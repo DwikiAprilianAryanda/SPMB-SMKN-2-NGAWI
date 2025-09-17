@@ -111,3 +111,14 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(nextTestimonial, interval);
   }
 });
+window.addEventListener("load", function () {
+  let preloader = document.getElementById("preloader");
+  let content = document.getElementById("content");
+
+  preloader.style.opacity = "0";
+
+  setTimeout(function () {
+    preloader.style.display = "none";
+    content.style.display = "block";
+  }, 800);
+});
