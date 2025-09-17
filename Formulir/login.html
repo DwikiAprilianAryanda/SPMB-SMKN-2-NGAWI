@@ -1,37 +1,297 @@
 <!DOCTYPE html>
 <html lang="id">
   <head>
-    <meta charset="UTF-8" />
-    <meta
-      author="Dwiki Aprilian Aryanda (2409106001) & Zeydan Fazle Mawla(2409106010)"
-    />
-    <title>Login Pendataran</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta author="Dwiki Aprilian Aryanda (2409106001) & Zeydan Fazle Mawla(2409106010)" />
+    <title>Masuk Portal SPMB - SMKN 2 Ngawi</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <style>
+      /* Auth page enhancements */
+      .auth-section {
+        min-height: calc(100vh - 160px);
+        display: flex;
+        align-items: center;
+        background: linear-gradient(135deg, #f6f7ff 0%, #eef0ff 100%);
+        padding: 80px 0;
+      }
+
+      .auth-container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 15px;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 40px;
+      }
+
+      .auth-illustration {
+        background: var(--card-bg);
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(63, 81, 181, 0.12);
+      }
+
+      .auth-illustration h2 {
+        margin: 0 0 10px;
+        font-size: 2rem;
+      }
+
+      .auth-illustration p {
+        color: #666;
+        margin: 0 0 20px;
+      }
+
+      .auth-illustration .points {
+        display: grid;
+        gap: 12px;
+        margin-top: 10px;
+      }
+
+      .auth-illustration .points li {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        color: #444;
+      }
+
+      .auth-illustration .points i {
+        color: var(--primary-color);
+        margin-top: 3px;
+      }
+
+      .auth-card {
+        background: var(--card-bg);
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(63, 81, 181, 0.12);
+      }
+
+      .auth-card h3 {
+        margin: 0 0 10px;
+        font-size: 1.6rem;
+      }
+
+      .auth-card .subtitle {
+        color: #666;
+        margin-bottom: 25px;
+      }
+
+      .form-field {
+        margin-bottom: 16px;
+      }
+
+      .form-label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+
+      .input-control {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-family: inherit;
+        outline: none;
+        transition: box-shadow 0.2s ease, border-color 0.2s ease;
+        background: #fff;
+      }
+
+      .input-control:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 4px rgba(63, 81, 181, 0.12);
+      }
+
+      .form-actions {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      .btn {
+        appearance: none;
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-weight: 700;
+        padding: 12px 18px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.05s ease, box-shadow 0.2s ease, background 0.2s ease;
+      }
+
+      .btn:active { transform: translateY(1px); }
+
+      .btn-primary-solid {
+        background: var(--primary-color);
+        color: #fff;
+        box-shadow: 0 6px 14px rgba(63, 81, 181, 0.25);
+      }
+
+      .btn-primary-solid:hover { background: #334494; }
+
+      .btn-secondary-outline {
+        background: transparent;
+        color: var(--primary-color);
+        border: 2px solid var(--primary-color);
+      }
+
+      .helper-links {
+        margin-top: 18px;
+        color: #666;
+      }
+
+      .helper-links a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .helper-links a:hover { text-decoration: underline; }
+
+      .note {
+        font-size: 0.9rem;
+        color: #777;
+        margin-top: -6px;
+        margin-bottom: 14px;
+      }
+
+      @media (max-width: 992px) {
+        .auth-container { grid-template-columns: 1fr; }
+      }
+    </style>
   </head>
+
   <body>
-    <center>
-      <h1>
-        Login Pendaftaran
-      </h1>
-      <hr />
-      <p>Silakan masukkan Nama dan NISN</p>
-      <form method="post" action="thank-you.html">
-        <label for="nama"
-          >Nama: <input type="text" id="nama" name="nama" required /></label
-        ><br />
-        <label for="nisn"
-          >NISN: <input type="text" id="nisn" name="nisn" required /></label
-        ><br /><br />
-        <p>
-          <a href="thank-you.html">Login</a> | <a href="login.html">Reset</a>
-        </p>
-      </form>
-      <p>
-        Jika belum register, silakan
-        <a href="register.html">register terlebih dahulu</a>.
-      </p>
-      <p><a href="index.html">Kembali ke Home</a></p>
-      <hr />
-      <p>&copy; 2025 SMK Negeri 2 Ngawi</p>
-    </center>
+    <!-- Preloader -->
+    <div id="preloader"><div class="loader"></div></div>
+
+    <div id="content" style="display: none">
+      <header class="header">
+        <div class="container-fluid">
+          <a href="index.html" class="logo">
+            <img src="assets/img/logo.gif" alt="logo" />
+            <h1>Portal SPMB</h1>
+          </a>
+
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="register.html">Register</a></li>
+            </ul>
+          </nav>
+
+          <a class="btn-primary" href="register.html">Daftar</a>
+          <button class="mobile-nav-toggle" aria-label="Menu"><i class="fa fa-bars"></i></button>
+        </div>
+      </header>
+
+      <main>
+        <section class="auth-section">
+          <div class="auth-container">
+            <div class="auth-illustration">
+              <h2>Selamat Datang Kembali</h2>
+              <p>Masuk untuk melanjutkan proses pendaftaran SPMB 2025.</p>
+              <ul class="points">
+                <li><i class="fa-solid fa-check"></i> Cepat dan mudah diakses</li>
+                <li><i class="fa-solid fa-check"></i> Data aman dan terenkripsi</li>
+                <li><i class="fa-solid fa-check"></i> Lanjutkan formulir pendaftaran Anda</li>
+              </ul>
+              <div style="margin-top: 20px">
+                <img src="assets/img/success.gif" alt="illustration" class="gif" />
+              </div>
+            </div>
+
+            <div class="auth-card">
+              <h3>Masuk Portal SPMB</h3>
+              <p class="subtitle">Silakan masukkan Nama dan NISN Anda</p>
+
+              <form method="post" action="thank-you.html" id="loginForm" novalidate>
+                <div class="form-field">
+                  <label for="nama" class="form-label">Nama Lengkap</label>
+                  <input type="text" id="nama" name="nama" class="input-control" placeholder="Contoh: Medi Tedi Azhari" required />
+                  <div class="note">Gunakan huruf sesuai identitas.</div>
+                </div>
+
+                <div class="form-field">
+                  <label for="nisn" class="form-label">NISN</label>
+                  <input type="text" id="nisn" name="nisn" class="input-control" inputmode="numeric" pattern="[0-9]{10}" placeholder="10 digit NISN" required />
+                  <div class="note">Masukkan 10 digit NISN (angka saja).</div>
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary-solid">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    Masuk
+                  </button>
+                  <button type="reset" class="btn btn-secondary-outline">
+                    <i class="fa-solid fa-rotate"></i>
+                    Reset
+                  </button>
+                </div>
+
+                <div class="helper-links">
+                  Belum punya akun? <a href="register.html">Daftar sekarang</a>
+                  <br />
+                  <a href="index.html">Kembali ke Home</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="footer-links">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <p class="copyright">© <span>Copyright</span> <strong>SMKN 2 NGAWI</strong></p>
+        </div>
+      </footer>
+
+      <a href="#" class="scroll-top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up-long"></i></a>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+      // Basic client-side validation enhancement
+      (function() {
+        const form = document.getElementById('loginForm');
+        const nisn = document.getElementById('nisn');
+
+        form.addEventListener('submit', function (e) {
+          let valid = true;
+          // Check NISN 10 digits
+          if (!/^\d{10}$/.test(nisn.value.trim())) {
+            valid = false;
+            nisn.focus();
+            nisn.setCustomValidity('NISN harus 10 digit angka.');
+          } else {
+            nisn.setCustomValidity('');
+          }
+
+          if (!valid) {
+            e.preventDefault();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

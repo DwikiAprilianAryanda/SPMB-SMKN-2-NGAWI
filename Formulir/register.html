@@ -1,129 +1,325 @@
 <!DOCTYPE html>
 <html lang="id">
   <head>
-    <meta charset="UTF-8" />
-    <meta
-      author="Dwiki Aprilian Aryanda (2409106001) & Zeydan Fazle Mawla(2409106010)"
-    />
-    <title>Formulir Pendaftaran</title>
-  </head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta author="Dwiki Aprilian Aryanda (2409106001) & Zeydan Fazle Mawla(2409106010)" />
+    <title>Daftar Portal SPMB - SMKN 2 Ngawi</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <style>
+      /* Register page layout */
+      .auth-section {
+        min-height: calc(100vh - 160px);
+        display: flex;
+        align-items: center;
+        background: linear-gradient(135deg, #f6f7ff 0%, #eef0ff 100%);
+        padding: 60px 0 80px;
+      }
+
+      .register-container {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 15px;
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 40px;
+      }
+
+      .register-info {
+        background: var(--card-bg);
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(63, 81, 181, 0.12);
+      }
+
+      .register-info h2 { margin: 0 0 10px; font-size: 2rem; }
+      .register-info p { color: #666; margin: 0 0 20px; }
+
+      .register-info .steps { display: grid; gap: 12px; }
+      .register-info .steps li { list-style: none; display: flex; gap: 10px; color: #444; }
+      .register-info .steps i { color: var(--primary-color); margin-top: 3px; }
+
+      .register-card {
+        background: var(--card-bg);
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(63, 81, 181, 0.12);
+      }
+
+      .register-card h3 { margin: 0 0 10px; font-size: 1.6rem; }
+      .register-card .subtitle { color: #666; margin-bottom: 25px; }
+
+      .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .grid-3 { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 16px; }
+      .grid-1 { display: grid; grid-template-columns: 1fr; gap: 16px; }
+
+      .form-field { display: flex; flex-direction: column; }
+      .form-label { font-weight: 600; margin-bottom: 6px; }
+      .input-control, .select-control, .textarea-control {
+        width: 100%; padding: 12px 14px; border: 1px solid #e0e0e0; border-radius: 10px;
+        font-size: 1rem; font-family: inherit; outline: none; background: #fff;
+        transition: box-shadow 0.2s ease, border-color 0.2s ease;
+      }
+      .textarea-control { min-height: 90px; resize: vertical; }
+      .input-control:focus, .select-control:focus, .textarea-control:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 4px rgba(63, 81, 181, 0.12);
+      }
+
+      .radio-group, .inline-group { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+      .radio-item { display: flex; align-items: center; gap: 8px; }
+
+      .form-actions { display: flex; gap: 12px; align-items: center; margin-top: 8px; }
+      .btn { appearance: none; border: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; padding: 12px 18px; border-radius: 10px; cursor: pointer; transition: transform 0.05s ease, box-shadow 0.2s ease, background 0.2s ease; }
+      .btn:active { transform: translateY(1px); }
+      .btn-primary-solid { background: var(--primary-color); color: #fff; box-shadow: 0 6px 14px rgba(63, 81, 181, 0.25); }
+      .btn-primary-solid:hover { background: #334494; }
+      .btn-secondary-outline { background: transparent; color: var(--primary-color); border: 2px solid var(--primary-color); }
+
+      .helper-links { margin-top: 18px; color: #666; }
+      .helper-links a { color: var(--primary-color); text-decoration: none; font-weight: 600; }
+      .helper-links a:hover { text-decoration: underline; }
+
+      @media (max-width: 992px) {
+        .register-container { grid-template-columns: 1fr; }
+        .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
   <body>
-    <center>
-      <h1>
-        Formulir Pendaftaran
-      </h1>
-      <hr />
-      <form method="post" action="thank-you.html">
-        <label
-          >Nama Lengkap:
-          <input
-            type="text"
-            name="nama_lengkap"
-            placeholder="Medi Tedi Azhari" /></label
-        ><br />
-        <label
-          >NISN:
-          <input type="text" name="nisn" placeholder="0069xxxxxx" /></label
-        ><br />
-        <label
-          >Tempat Lahir:
-          <input
-            type="text"
-            name="tempat_lahir"
-            placeholder="Ngawi Selatan" /></label
-        ><br />
-        <label
-          >Tanggal Lahir:
-          <input
-            type="text"
-            name="tanggal_lahir"
-            placeholder="YYYY-MM-DD" /></label
-        ><br />
-        <label>Jenis Kelamin:</label><br />
-        <input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki
-        <input type="radio" name="jenis_kelamin" value="perempuan" />
-        Perempuan<br />
-        <label>Agama:</label><br />
-        <input type="radio" name="agama" value="islam" /> Islam
-        <input type="radio" name="agama" value="kristen" /> Kristen
-        <input type="radio" name="agama" value="hindu" /> Hindu
-        <input type="radio" name="agama" value="budha" /> Budha
-        <input type="radio" name="agama" value="lainnya" /> Lainnya<br />
-        <label
-          >Alamat:
-          <br />
-          <textarea
-            name="alamat"
-            placeholder="Jl. Anggrek Mekar, RT 01 RW 02, Ds. Mekar, Kec. Ngawi"
-          ></textarea></label
-        ><br />
-        <label
-          >Kode Pos:
-          <input type="text" name="kode_pos" placeholder="12345" /></label
-        ><br />
-        <label
-          >Asal Sekolah:
-          <input
-            type="text"
-            name="asal_sekolah"
-            placeholder="SMPN 10 Ngawi" /></label
-        ><br />
-        <label
-          >Jurusan yang dipilih:
-          <select name="jurusan">
-            <option value="teknik_informatika">Teknik Informatika</option>
-            <option value="akuntansi">Akuntansi</option>
-            <option value="manajemen">Manajemen</option>
-            <option value="teknik_mesin">Teknik Mesin</option>
-            <option value="teknik_elektro">Teknik Elektro</option>
-          </select> </label
-        ><br />
-        <label
-          >Alamat Email:
-          <input
-            type="email"
-            name="alamat_email"
-            placeholder="xxx@gmail.com" /></label
-        ><br />
-        <label
-          >No HP:
-          <input type="text" name="no_hp" placeholder="08xxxxxxxxxx" /></label
-        ><br />
-        <label
-          >Nama Ayah:
-          <input type="text" name="nama_ayah" placeholder="Kaliman" /></label
-        ><br />
-        <label
-          >Pekerjaan Ayah:
-          <input type="text" name="pekerjaan_ayah" placeholder="PNS" /></label
-        ><br />
-        <label
-          >Nama Ibu:
-          <input type="text" name="nama_ibu" placeholder="Maharani" /></label
-        ><br />
-        <label
-          >Pekerjaan Ibu:
-          <input
-            type="text"
-            name="pekerjaan_ibu"
-            placeholder="Ibu Rumah Tangga" /></label
-        ><br />
-        <label
-          >Alamat orang tua:
-          <textarea
-            name="alamat_orang_tua"
-            placeholder="Jl. Anggrek Mekar, RT 01 RW 02, Ds. Mekar, Kec. Ngawi"
-          ></textarea></label
-        ><br />
-        <p>
-          <a href="berkas.html">Selanjutnya</a> |
-          <a href="register.html">Reset</a>
-        </p>
-      </form>
-      <p><a href="index.html">Kembali ke Home</a></p>
-      <hr />
-      <p>&copy; 2025 SMK Negeri 2 Ngawi</p>
-    </center>
+    <!-- Preloader -->
+    <div id="preloader"><div class="loader"></div></div>
+
+    <div id="content" style="display: none">
+      <header class="header">
+        <div class="container-fluid">
+          <a href="index.html" class="logo">
+            <img src="assets/img/logo.gif" alt="logo" />
+            <h1>Portal SPMB</h1>
+          </a>
+
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="login.html">Login</a></li>
+            </ul>
+          </nav>
+
+          <a class="btn-primary" href="login.html">Masuk</a>
+          <button class="mobile-nav-toggle" aria-label="Menu"><i class="fa fa-bars"></i></button>
+        </div>
+      </header>
+
+      <main>
+        <section class="auth-section">
+          <div class="register-container">
+            <div class="register-info">
+              <h2>Daftar Akun SPMB</h2>
+              <p>Buat akun untuk memulai pendaftaran SPMB 2025 di SMKN 2 Ngawi.</p>
+              <ul class="steps">
+                <li><i class="fa-solid fa-1"></i> Isi data diri dan orang tua</li>
+                <li><i class="fa-solid fa-2"></i> Pilih jurusan dan asal sekolah</li>
+                <li><i class="fa-solid fa-3"></i> Unggah berkas pada tahap berikutnya</li>
+              </ul>
+              <div style="margin-top: 20px">
+                <img src="assets/img/done.gif" alt="illustration" class="gif" />
+              </div>
+            </div>
+
+            <div class="register-card">
+              <h3>Formulir Pendaftaran</h3>
+              <p class="subtitle">Lengkapi data berikut dengan benar</p>
+
+              <form method="post" action="thank-you.html" id="registerForm" novalidate>
+                <div class="grid-2">
+                  <div class="form-field">
+                    <label class="form-label" for="nama_lengkap">Nama Lengkap</label>
+                    <input type="text" id="nama_lengkap" name="nama_lengkap" class="input-control" placeholder="Medi Tedi Azhari" required />
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" for="nisn">NISN</label>
+                    <input type="text" id="nisn" name="nisn" class="input-control" inputmode="numeric" pattern="[0-9]{10}" placeholder="10 digit NISN" required />
+                  </div>
+                </div>
+
+                <div class="grid-3">
+                  <div class="form-field">
+                    <label class="form-label" for="tempat_lahir">Tempat Lahir</label>
+                    <input type="text" id="tempat_lahir" name="tempat_lahir" class="input-control" placeholder="Ngawi Selatan" required />
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" for="tanggal_lahir">Tanggal Lahir</label>
+                    <input type="date" id="tanggal_lahir" name="tanggal_lahir" class="input-control" required />
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" for="kode_pos">Kode Pos</label>
+                    <input type="text" id="kode_pos" name="kode_pos" class="input-control" inputmode="numeric" pattern="[0-9]{5}" placeholder="12345" required />
+                  </div>
+                </div>
+
+                <div class="grid-1">
+                  <div class="form-field">
+                    <span class="form-label">Jenis Kelamin</span>
+                    <div class="radio-group">
+                      <label class="radio-item"><input type="radio" name="jenis_kelamin" value="laki-laki" required /> Laki-laki</label>
+                      <label class="radio-item"><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label>
+                    </div>
+                  </div>
+
+                  <div class="form-field">
+                    <span class="form-label">Agama</span>
+                    <div class="inline-group">
+                      <label class="radio-item"><input type="radio" name="agama" value="islam" required /> Islam</label>
+                      <label class="radio-item"><input type="radio" name="agama" value="kristen" /> Kristen</label>
+                      <label class="radio-item"><input type="radio" name="agama" value="hindu" /> Hindu</label>
+                      <label class="radio-item"><input type="radio" name="agama" value="budha" /> Budha</label>
+                      <label class="radio-item"><input type="radio" name="agama" value="lainnya" /> Lainnya</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="grid-1">
+                  <div class="form-field">
+                    <label class="form-label" for="alamat">Alamat</label>
+                    <textarea id="alamat" name="alamat" class="textarea-control" placeholder="Jl. Anggrek Mekar, RT 01 RW 02, Ds. Mekar, Kec. Ngawi" required></textarea>
+                  </div>
+                </div>
+
+                <div class="grid-2">
+                  <div class="form-field">
+                    <label class="form-label" for="asal_sekolah">Asal Sekolah</label>
+                    <input type="text" id="asal_sekolah" name="asal_sekolah" class="input-control" placeholder="SMPN 10 Ngawi" required />
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" for="jurusan">Jurusan yang Dipilih</label>
+                    <select id="jurusan" name="jurusan" class="select-control" required>
+                      <option value="">-- Pilih Jurusan --</option>
+                      <option value="teknik_informatika">Teknik Informatika</option>
+                      <option value="akuntansi">Akuntansi</option>
+                      <option value="manajemen">Manajemen</option>
+                      <option value="teknik_mesin">Teknik Mesin</option>
+                      <option value="teknik_elektro">Teknik Elektro</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="grid-2">
+                  <div class="form-field">
+                    <label class="form-label" for="alamat_email">Alamat Email</label>
+                    <input type="email" id="alamat_email" name="alamat_email" class="input-control" placeholder="xxx@gmail.com" required />
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" for="no_hp">No HP</label>
+                    <input type="text" id="no_hp" name="no_hp" class="input-control" inputmode="numeric" pattern="0[0-9]{9,12}" placeholder="08xxxxxxxxxx" required />
+                  </div>
+                </div>
+
+                <div class="grid-2">
+                  <div class="form-field">
+                    <label class="form-label" for="nama_ayah">Nama Ayah</label>
+                    <input type="text" id="nama_ayah" name="nama_ayah" class="input-control" placeholder="Kaliman" />
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" for="pekerjaan_ayah">Pekerjaan Ayah</label>
+                    <input type="text" id="pekerjaan_ayah" name="pekerjaan_ayah" class="input-control" placeholder="PNS" />
+                  </div>
+                </div>
+
+                <div class="grid-2">
+                  <div class="form-field">
+                    <label class="form-label" for="nama_ibu">Nama Ibu</label>
+                    <input type="text" id="nama_ibu" name="nama_ibu" class="input-control" placeholder="Maharani" />
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" for="pekerjaan_ibu">Pekerjaan Ibu</label>
+                    <input type="text" id="pekerjaan_ibu" name="pekerjaan_ibu" class="input-control" placeholder="Ibu Rumah Tangga" />
+                  </div>
+                </div>
+
+                <div class="grid-1">
+                  <div class="form-field">
+                    <label class="form-label" for="alamat_orang_tua">Alamat Orang Tua</label>
+                    <textarea id="alamat_orang_tua" name="alamat_orang_tua" class="textarea-control" placeholder="Jl. Anggrek Mekar, RT 01 RW 02, Ds. Mekar, Kec. Ngawi"></textarea>
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary-solid">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Kirim & Lanjutkan
+                  </button>
+                  <button type="reset" class="btn btn-secondary-outline">
+                    <i class="fa-solid fa-rotate"></i>
+                    Reset
+                  </button>
+                </div>
+
+                <div class="helper-links">
+                  Sudah punya akun? <a href="login.html">Masuk</a><br />
+                  <a href="index.html">Kembali ke Home</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="footer-links">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <p class="copyright">© <span>Copyright</span> <strong>SMKN 2 NGAWI</strong></p>
+        </div>
+      </footer>
+
+      <a href="#" class="scroll-top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up-long"></i></a>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+      (function(){
+        const form = document.getElementById('registerForm');
+        const nisn = document.getElementById('nisn');
+        const kodePos = document.getElementById('kode_pos');
+        const noHp = document.getElementById('no_hp');
+        const jurusan = document.getElementById('jurusan');
+
+        form.addEventListener('submit', function(e){
+          let valid = true;
+          if(!/^\d{10}$/.test(nisn.value.trim())){
+            nisn.setCustomValidity('NISN harus 10 digit angka.');
+            valid = false;
+          } else { nisn.setCustomValidity(''); }
+
+          if(!/^\d{5}$/.test(kodePos.value.trim())){
+            kodePos.setCustomValidity('Kode pos harus 5 digit angka.');
+            valid = false;
+          } else { kodePos.setCustomValidity(''); }
+
+          if(!/^0\d{9,12}$/.test(noHp.value.trim())){
+            noHp.setCustomValidity('Nomor HP harus diawali 0 dan 10-13 digit.');
+            valid = false;
+          } else { noHp.setCustomValidity(''); }
+
+          if(jurusan.value === ''){
+            jurusan.setCustomValidity('Silakan pilih jurusan.');
+            valid = false;
+          } else { jurusan.setCustomValidity(''); }
+
+          if(!valid) e.preventDefault();
+        });
+      })();
+    </script>
   </body>
 </html>

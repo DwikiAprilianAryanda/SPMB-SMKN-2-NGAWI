@@ -110,6 +110,81 @@ document.addEventListener("DOMContentLoaded", () => {
     showTestimonial(currentIndex);
     setInterval(nextTestimonial, interval);
   }
+
+  // Global form validation for login and register
+  const loginForm = document.getElementById("loginForm");
+  const registerForm = document.getElementById("registerForm");
+
+  function ensureAlertElement(form) {
+    let alert = form.querySelector(".form-alert");
+    if (!alert) {
+      alert = document.createElement("div");
+      alert.className = "alert alert-warning form-alert";
+      alert.setAttribute("role", "alert");
+      alert.style.marginBottom = "16px";
+      form.prepend(alert);
+    }
+    return alert;
+  }
+
+  function showWarning(form, message) {
+    const alert = ensureAlertElement(form);
+    alert.textContent = message;
+    alert.style.display = "block";
+  }
+
+  function hideWarning(form) {
+    const alert = form.querySelector(".form-alert");
+    if (alert) alert.style.display = "none";
+  }
+
+  function markInvalidFields(form) {
+    const fields = form.querySelectorAll("input, select, textarea");
+    fields.forEach((f) => {
+      f.classList.remove("is-invalid");
+      if (!f.checkValidity()) {
+        f.classList.add("is-invalid");
+      }
+    });
+  }
+
+  function getFirstInvalid(form) {
+    const fields = form.querySelectorAll("input, select, textarea");
+    for (const f of fields) {
+      if (!f.checkValidity()) return f;
+    }
+    return null;
+  }
+
+  function handleFormSubmit(form, successRedirect) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      hideWarning(form);
+
+      const isValid = form.checkValidity();
+      markInvalidFields(form);
+
+      if (!isValid) {
+        showWarning(form, "Lengkapi data pribadi Anda terlebih dahulu.");
+        const firstInvalid = getFirstInvalid(form);
+        if (firstInvalid) {
+          firstInvalid.focus();
+        }
+        form.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+
+      // If valid, redirect as requested
+      window.location.href = successRedirect;
+    });
+  }
+
+  if (loginForm) {
+    handleFormSubmit(loginForm, "thank-you.html");
+  }
+  if (registerForm) {
+    handleFormSubmit(registerForm, "regis-berhasil.html");
+  }
 });
 window.addEventListener("load", function () {
   let preloader = document.getElementById("preloader");
