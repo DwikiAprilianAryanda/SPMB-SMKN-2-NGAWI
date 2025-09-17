@@ -10,867 +10,501 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Amatic+SC:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       rel="stylesheet"
     />
 
-    <!-- Vendor CSS Files -->
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-
-    <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
   </head>
 
-  <body class="index-page">
-    <header id="header" class="header d-flex align-items-center sticky-top">
-      <div
-        class="container position-relative d-flex align-items-center justify-content-between"
-      >
-        <a
-          href="index.html"
-          class="logo d-flex align-items-center me-auto me-xl-0"
-        >
-          <img src="assets/img/logo.gif" alt="portal">
-          <h1 class="sitename">Portal SPMB</h1>
-          <span>.</span>
+  <body>
+    <header class="header">
+      <div class="container-fluid">
+        <a href="index.html" class="logo">
+          <img src="assets/img/logo.gif" alt="logo" />
+          <h1>Portal SPMB</h1>
         </a>
 
-        <nav id="navmenu" class="navmenu">
+        <nav id="navbar" class="navbar">
           <ul>
-            <li>
-              <a href="#hero" class="active">Home<br /></a>
-            </li>
+            <li><a href="#hero" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#events">Major</a></li>
-            <li><a href="#chefs">Headmaster</a></li>
+            <li><a href="#major">Major</a></li>
+            <li><a href="#headmaster">Headmaster</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="btn-getstarted" href="login.html"
-          >Masuk</a
-        >
+        <a class="btn-primary" href="login.html">Masuk</a>
+        <button class="mobile-nav-toggle"><i class="fa fa-bars"></i></button>
       </div>
     </header>
 
-    <main class="main">
-      <!-- Hero Section -->
-      <section id="hero" class="hero section light-background">
-        <div class="container">
-          <div
-            class="row gy-4 justify-content-center justify-content-lg-between"
-          >
-            <div
-              class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center"
-            >
-              <h1 data-aos="fade-up">Selamat Datang di<br />SMKN 2 NGAWI</h1>
-              <p data-aos="fade-up" data-aos-delay="100">
-                Sekolah Hebat, Bermartabat, Berbudaya, Berwawasan
-              </p>
-              <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-                <a href="login.html" class="btn-get-started">Daftar Sekarang</a>
-                
-              </div>
+    <main>
+      <section id="hero" class="hero-section">
+        <div class="container-fluid">
+          <div class="hero-content">
+            <h1>Selamat Datang di<br />SMKN 2 NGAWI</h1>
+            <p>Sekolah Hebat, Bermartabat, Berbudaya, Berwawasan</p>
+            <div class="hero-actions">
+              <a href="login.html" class="btn-secondary">Daftar Sekarang</a>
             </div>
-            <div
-              class="col-lg-5 order-1 order-lg-2 hero-img"
-              data-aos="zoom-out"
-            >
-              <img
-                src="assets/img/smkn2ngawi.png"
-                class="img-fluid animated"
-                alt=""
-              />
-            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="assets/img/smkn2ngawi.png"
+              alt="School building illustration"
+            />
           </div>
         </div>
       </section>
-      <!-- /Hero Section -->
 
-      <!-- About Section -->
-      <section id="about" class="about section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>About<br /></h2>
-          <p>
-            <span>Apa Itu</span>
-            <span class="description-title">Portal SPMB?</span>
-          </p>
-        </div>
-        <!-- End Section Title -->
-<div class="container mt-4">
-<div class="content ps-0 ps-lg-5">
-  <p class="fst-italic mb-5">
-    Sistem Penerimaan Murid Baru (SPMB) tahun 2025, yang
-    menggantikan Penerimaan Peserta Didik Baru (PPDB), akan
-    menggunakan empat jalur utama: Domisili, Afirmasi, Prestasi,
-    dan Mutasi. SPMB akan dilaksanakan secara daring (online),
-    dengan beberapa sekolah mungkin melakukan luring (offline).
-    Berikut adalah penjelasan lebih rinci mengenai masing-masing
-    jalur pada SPMB di SMK Negeri 2 Ngawi :
-  </p>
-
-    <div class="row gy-4">
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="icon-box d-flex flex-column justify-content-center align-items-center h-100 pb-5 text-center">
-          <i class="bi bi-geo-alt-fill"></i>
-          <h4>Jalur Domisili</h4>
-          <p>Memprioritaskan calon murid yang berdomisili di dekat sekolah untuk mendekatkan jarak tempuh</p>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="icon-box d-flex flex-column justify-content-center align-items-center h-100 pb-5 text-center">
-          <i class="bi bi-people-fill"></i>
-          <h4>Jalur Afirmasi</h4>
-          <p>Ditujukan untuk siswa dari keluarga kurang mampu atau berkebutuhan khusus</p>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="icon-box d-flex flex-column justify-content-center align-items-center h-100 pb-5 text-center">
-          <i class="bi bi-trophy-fill"></i>
-          <h4>Jalur Prestasi</h4>
-          <p>Memberikan kesempatan bagi siswa dengan prestasi akademik maupun non-akademik</p>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-        <div class="icon-box d-flex flex-column justify-content-center align-items-center h-100 pb-5 text-center">
-          <i class="bi bi-arrow-repeat"></i>
-          <h4>Jalur Mutasi</h4>
-          <p>Diperuntukkan bagi siswa yang orang tuanya pindah tugas atau anak guru di sekolah tertentu</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-      <!-- /About Section -->
-
-      <!-- Why Us Section -->
-      <section id="why-us" class="why-us section light-background">
-        <div class="container">
-          <div class="row gy-4">
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="why-box">
-                <h3>Mengapa SMKN 2 Ngawi?</h3>
+      <section id="about" class="about-section">
+        <div class="container-fluid">
+          <div class="section-header">
+            <h2>About</h2>
+            <p>
+              <span>Apa Itu</span> <span class="highlight">Portal SPMB?</span>
+            </p>
+          </div>
+          <div class="about-content">
+            <p class="intro-text">
+              Sistem Penerimaan Murid Baru (SPMB) tahun 2025, yang menggantikan
+              Penerimaan Peserta Didik Baru (PPDB), akan menggunakan empat jalur
+              utama: Domisili, Afirmasi, Prestasi, dan Mutasi. SPMB akan
+              dilaksanakan secara daring (online), dengan beberapa sekolah
+              mungkin melakukan luring (offline). Berikut adalah penjelasan
+              lebih rinci mengenai masing-masing jalur pada SPMB di SMK Negeri 2
+              Ngawi :
+            </p>
+            <div class="grid-container">
+              <div class="card">
+                <i class="fa-solid fa-house-chimney"></i>
+                <h4>Jalur Domisili</h4>
                 <p>
-                  Memilih SMKN 2 Ngawi adalah langkah tepat bagi siswa yang ingin mendapatkan pendidikan berkualitas sekaligus keterampilan praktis yang siap digunakan di dunia kerja. Sekolah ini tidak hanya menekankan teori, tetapi juga praktik nyata yang relevan dengan kebutuhan industri saat ini
+                  Memprioritaskan calon murid yang berdomisili di dekat sekolah
+                  untuk mendekatkan jarak tempuh
                 </p>
-                <div class="text-center">
-                  <a href="#" class="more-btn"
-                    ><span>Lebih Lanjut</span> <i class="bi bi-chevron-right"></i
-                  ></a>
-                </div>
               </div>
-            </div>
-            <!-- End Why Box -->
-
-            <div class="col-lg-8 d-flex align-items-stretch">
-              <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="col-xl-4">
-                  <div
-                    class="icon-box d-flex flex-column justify-content-center align-items-center"
-                  >
-                    <i class="bi bi-clipboard-data"></i>
-                    <h4>Jurusan Lengkap dan Relevan</h4>
-                    <p>
-                      Siswa bisa memilih jurusan sesuai minat dan bakat, mulai dari bidang teknik, bisnis, hingga pariwisata
-                    </p>
-                  </div>
-                </div>
-                <!-- End Icon Box -->
-
-                <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
-                  <div
-                    class="icon-box d-flex flex-column justify-content-center align-items-center"
-                  >
-                    <i class="bi bi-gem"></i>
-                    <h4>Fasilitas dan Pembelajaran Modern</h4>
-                    <p>
-                      Didukung laboratorium, bengkel, serta ruang praktik yang memadai untuk menunjang keterampilan
-                    </p>
-                  </div>
-                </div>
-                <!-- End Icon Box -->
-
-                <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
-                  <div
-                    class="icon-box d-flex flex-column justify-content-center align-items-center"
-                  >
-                    <i class="bi bi-inboxes"></i>
-                    <h4>Kerja Sama dengan Dunia Industri</h4>
-                    <p>
-                      Program Prakerin dan hubungan baik dengan DUDI membuka peluang kerja luas setelah lulus
-                    </p>
-                  </div>
-                </div>
-                <!-- End Icon Box -->
+              <div class="card">
+                <i class="fa-solid fa-user-group"></i>
+                <h4>Jalur Afirmasi</h4>
+                <p>
+                  Ditujukan untuk siswa dari keluarga kurang mampu atau
+                  berkebutuhan khusus
+                </p>
+              </div>
+              <div class="card">
+                <i class="fa-solid fa-medal"></i>
+                <h4>Jalur Prestasi</h4>
+                <p>
+                  Memberikan kesempatan bagi siswa dengan prestasi akademik
+                  maupun non-akademik
+                </p>
+              </div>
+              <div class="card">
+                <i class="fa-solid fa-arrows-turn-right"></i>
+                <h4>Jalur Mutasi</h4>
+                <p>
+                  Diperuntukkan bagi siswa yang orang tuanya pindah tugas atau
+                  anak guru di sekolah tertentu
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- /Why Us Section -->
 
-      <!-- Stats Section -->
-      <section id="stats" class="stats section dark-background">
-        <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in" />
+      <section id="why-us" class="why-us-section">
+        <div class="container-fluid">
+          <div class="why-us-box">
+            <h3>Mengapa SMKN 2 Ngawi?</h3>
+            <p>
+              Memilih SMKN 2 Ngawi merupakan langkah yang sangat tepat bagi
+              siswa yang ingin mendapatkan keterampilan praktis yang dapat
+              langsung diterapkan di dunia kerja. Sekolah ini tidak hanya
+              menekankan pemahaman teori di dalam kelas, tetapi juga memberikan
+              kesempatan kepada siswa untuk terjun langsung dalam praktik nyata
+              yang sesuai dengan kebutuhan industri modern. Dengan dukungan
+              tenaga pendidik yang berpengalaman, fasilitas pembelajaran yang
+              lengkap, SMKN 2 Ngawi berkomitmen mencetak lulusan yang kompeten
+              dan berdaya saing. Selain itu, sekolah ini juga menjalin kerja
+              sama dengan berbagai mitra industri, sehingga siswa memiliki
+              peluang besar untuk melakukan praktik kerja lapangan di dunia
+              profesional.
+            </p>
+            <a href="#" class="btn-more">Lebih Lanjut</a>
+          </div>
 
-        <div
-          class="container position-relative"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <div class="row gy-4">
-            <div class="col-lg-3 col-md-6">
-              <div class="stats-item text-center w-100 h-100">
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="832"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p>Siswa</p>
-              </div>
+          <div class="why-us-cards">
+            <div class="card">
+              <i class="fa-solid fa-clipboard-check"></i>
+              <h4>Jurusan Lengkap dan Relevan</h4>
+              <p>
+                Siswa bisa memilih jurusan sesuai minat dan bakat, mulai dari
+                bidang teknik, bisnis, hingga pariwisata
+              </p>
             </div>
-            <!-- End Stats Item -->
-
-            <div class="col-lg-3 col-md-6">
-              <div class="stats-item text-center w-100 h-100">
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="63"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p>Guru</p>
-              </div>
+            <div class="card">
+              <i class="fa-solid fa-gem"></i>
+              <h4>Fasilitas dan Pembelajaran Modern</h4>
+              <p>
+                Didukung laboratorium, bengkel, serta ruang praktik yang memadai
+                untuk menunjang keterampilan
+              </p>
             </div>
-            <!-- End Stats Item -->
-
-            <div class="col-lg-3 col-md-6">
-              <div class="stats-item text-center w-100 h-100">
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="36"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p>Staf</p>
-              </div>
+            <div class="card">
+              <i class="fa-solid fa-suitcase"></i>
+              <h4>Kerja Sama dengan Dunia Industri</h4>
+              <p>
+                Program Prakerin dan hubungan baik dengan Dunia Industri membuka
+                peluang kerja luas setelah lulus
+              </p>
             </div>
-            <!-- End Stats Item -->
-
-            <div class="col-lg-3 col-md-6">
-              <div class="stats-item text-center w-100 h-100">
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="8"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p>Jurusan</p>
-              </div>
+            <div class="card">
+              <i class="fa-solid fa-user"></i>
+              <h4>Pengembangan Karakter dan Soft Skill</h4>
+              <p>
+                Selain keterampilan teknis, siswa juga diberi pelatihan
+                kepemimpinan, komunikasi, serta disiplin kerja
+              </p>
             </div>
-            <!-- End Stats Item -->
           </div>
         </div>
       </section>
-      <!-- /Stats Section -->
 
-      <!-- Testimonials Section -->
-      <section id="testimonials" class="testimonials section light-background">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>TESTIMONIALS</h2>
-          <p>
-            Kata <span class="description-title">Alumni</span>
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper init-swiper">
-            <script type="application/json" class="swiper-config">
-              {
-                "loop": true,
-                "speed": 600,
-                "autoplay": {
-                  "delay": 5000
-                },
-                "slidesPerView": "auto",
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "type": "bullets",
-                  "clickable": true
-                }
-              }
-            </script>
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <div class="row gy-4 justify-content-center">
-                    <div class="col-lg-6">
-                      <div class="testimonial-content">
-                        <p>
-                          <i class="bi bi-quote quote-icon-left"></i>
-                          <span
-                            >Belajar di SMKN 2 Ngawi membuat saya lebih percaya diri karena dibekali keterampilan yang langsung terpakai di dunia kerja.</span
-                          >
-                          <i class="bi bi-quote quote-icon-right"></i>
-                        </p>
-                        <h3>Wahyu God</h3>
-                        <h4>Alumni Angkatan 12</h4>
-                        <div class="stars">
-                          <i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 text-center">
-                      <img
-                        src="assets/img/alumni/alumni-1.jpg"
-                        class="img-fluid testimonial-img"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <div class="row gy-4 justify-content-center">
-                    <div class="col-lg-6">
-                      <div class="testimonial-content">
-                        <p>
-                          <i class="bi bi-quote quote-icon-left"></i>
-                          <span
-                            >Guru-gurunya sabar dan berpengalaman, saya merasa benar-benar diarahkan untuk meraih masa depan yang lebih baik.</span
-                          >
-                          <i class="bi bi-quote quote-icon-right"></i>
-                        </p>
-                        <h3>Dwiki Aprilian</h3>
-                        <h4>Alumni Angkatan 22</h4>
-                        <div class="stars">
-                          <i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 text-center">
-                      <img
-                        src="assets/img/alumni/alumni-2.jpg"
-                        class="img-fluid testimonial-img"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <div class="row gy-4 justify-content-center">
-                    <div class="col-lg-6">
-                      <div class="testimonial-content">
-                        <p>
-                          <i class="bi bi-quote quote-icon-left"></i>
-                          <span
-                            >Berkat pengalaman Prakerin, saya bisa cepat beradaptasi di perusahaan setelah lulus dari SMKN 2 Ngawi.</span
-                          >
-                          <i class="bi bi-quote quote-icon-right"></i>
-                        </p>
-                        <h3>Medi Tedi</h3>
-                        <h4>Alumni Angkatan 10</h4>
-                        <div class="stars">
-                          <i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 text-center">
-                      <img
-                        src="assets/img/alumni/alumni-3.jpg"
-                        class="img-fluid testimonial-img"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <div class="row gy-4 justify-content-center">
-                    <div class="col-lg-6">
-                      <div class="testimonial-content">
-                        <p>
-                          <i class="bi bi-quote quote-icon-left"></i>
-                          <span
-                            >SMKN 2 Ngawi memberi saya banyak pengalaman berharga, bukan hanya keterampilan teknis tapi juga kedisiplinan dan kerja sama tim.</span
-                          >
-                          <i class="bi bi-quote quote-icon-right"></i>
-                        </p>
-                        <h3>Timoti Jamal</h3>
-                        <h4>Alumni Angkatan 17</h4>
-                        <div class="stars">
-                          <i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 text-center">
-                      <img
-                        src="assets/img/alumni/alumni-4.jpg"
-                        class="img-fluid testimonial-img"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-            </div>
-            <div class="swiper-pagination"></div>
+      <section id="stats" class="stats-section">
+        <div class="container-fluid">
+          <div class="stats-item">
+            <span class="stat-number">2000+</span>
+            <p>Alumni</p>
+          </div>
+          <div class="stats-item">
+            <span class="stat-number">10+</span>
+            <p>Jurusan</p>
+          </div>
+          <div class="stats-item">
+            <span class="stat-number">50+</span>
+            <p>Guru</p>
+          </div>
+          <div class="stats-item">
+            <span class="stat-number">100+</span>
+            <p>Kemitraan</p>
           </div>
         </div>
       </section>
-      <!-- /Testimonials Section -->
 
-      <!-- Events Section -->
-      <section id="events" class="events section">
-        <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper init-swiper">
-            <script type="application/json" class="swiper-config">
-              {
-                "loop": true,
-                "speed": 600,
-                "autoplay": {
-                  "delay": 5000
-                },
-                "slidesPerView": "auto",
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "type": "bullets",
-                  "clickable": true
-                },
-                "breakpoints": {
-                  "320": {
-                    "slidesPerView": 1,
-                    "spaceBetween": 40
-                  },
-                  "1200": {
-                    "slidesPerView": 3,
-                    "spaceBetween": 1
-                  }
-                }
-              }
-            </script>
-            <div class="swiper-wrapper">
-              <div
-                class="swiper-slide event-item d-flex flex-column justify-content-end"
-                style="background-image: url(assets/img/jurusan/jurusan-1.jpg)"
-              >
-                <h3>JURUSAN</h3>
-                <div class="price align-self-start">TATA BOGA</div>
-                <p class="description">
-                  Asah kemampuan memasak, menyajikan, dan mengelola usaha kuliner profesional.
-                </p>
-              </div>
-              <!-- End Event item -->
-               <div
-                class="swiper-slide event-item d-flex flex-column justify-content-end"
-                style="background-image: url(assets/img/jurusan/jurusan-2.jpg)"
-              >
-                <h3>JURUSAN</h3>
-                <div class="price align-self-start">TATA BUSANA</div>
-                <p class="description">
-                  Kembangkan kreativitasmu dalam desain dan produksi busana modern maupun tradisional.
-                </p>
-              </div>
-              <div
-                class="swiper-slide event-item d-flex flex-column justify-content-end"
-                style="background-image: url(assets/img/jurusan/jurusan-3.jpg)"
-              >
-                <h3>JURUSAN</h3>
-                <div class="price align-self-start">TKJ</div>
-                <p class="description">
-                  Belajar jaringan komputer, server, dan keamanan IT untuk siap bekerja di dunia digital.
-                </p>
-              </div>
-              <div
-                class="swiper-slide event-item d-flex flex-column justify-content-end"
-                style="background-image: url(assets/img/jurusan/jurusan-4.jpg)"
-              >
-                <h3>JURUSAN</h3>
-                <div class="price align-self-start">AKL</div>
-                <p class="description">
-                  Kuasai akuntansi dan keuangan lembaga sebagai bekal karier di bidang bisnis dan perkantoran.
-                </p>
-              </div>
-              <div
-                class="swiper-slide event-item d-flex flex-column justify-content-end"
-                style="background-image: url(assets/img/jurusan/jurusan-5.jpg)"
-              >
-                <h3>JURUSAN</h3>
-                <div class="price align-self-start">TKRO</div>
-                <p class="description">
-                  Pelajari perawatan dan perbaikan mobil dengan teknologi otomotif terkini.
-                </p>
-              </div>
-<div
-                class="swiper-slide event-item d-flex flex-column justify-content-end"
-                style="background-image: url(assets/img/jurusan/jurusan-6.jpg)"
-              >
-                <h3>JURUSAN</h3>
-                <div class="price align-self-start">DKV</div>
-                <p class="description">
-                  Ekspresikan ide kreatif melalui desain grafis, ilustrasi, fotografi, dan multimedia.
-                </p>
-              </div>
-              <div
-                class="swiper-slide event-item d-flex flex-column justify-content-end"
-                style="background-image: url(assets/img/jurusan/jurusan-7.jpg)"
-              >
-                <h3>JURUSAN</h3>
-                <div class="price align-self-start">TEKNIK MESIN</div>
-                <p class="description">
-                  Dalami teknologi mesin dan manufaktur untuk berkarier di industri modern.
-                </p>
-              </div>
-              <!-- End Event item -->
+      <section id="testimonials" class="testimonials-section">
+        <div class="container-fluid">
+          <div class="section-header">
+            <h2>Testimonials</h2>
+            <p>
+              <span>Pendapat Mereka</span>
+              <span class="highlight">Tentang Kami</span>
+            </p>
+          </div>
 
-              <div
-                class="swiper-slide event-item d-flex flex-column justify-content-end"
-                style="background-image: url(assets/img/jurusan/jurusan-8.jpg)"
-              >
-                <h3>JURUSAN</h3>
-                <div class="price align-self-start">KRIYA KAYU</div>
-                <p class="description">
-                  Ciptakan produk furnitur dan kerajinan kayu dengan nilai seni dan ekonomi tinggi.
+          <div class="testimonials-slider">
+            <div class="testimonial-item active">
+              <div class="testimonial-quote">
+                <p>
+                  "SMKN 2 Ngawi tidak hanya memberikan ilmu, tapi juga
+                  pengalaman berharga yang membentuk saya menjadi pribadi yang
+                  siap menghadapi dunia kerja."
                 </p>
               </div>
-              <!-- End Event item -->
-
-              
-              <!-- End Event item -->
+              <div class="testimonial-author">
+                <img
+                  src="assets/img/alumni/alumni-1.jpg"
+                  alt="Wahyu God"
+                  class="author-img"
+                />
+                <h4>Wahyu God</h4>
+                <p class="role">Alumni Angkatan 22</p>
+              </div>
             </div>
-            <div class="swiper-pagination"></div>
+
+            <div class="testimonial-item">
+              <div class="testimonial-quote">
+                <p>
+                  "Kurikulum yang relevan dan guru-guru yang kompeten membuat
+                  pembelajaran di SMKN 2 Ngawi sangat efektif. Saya bangga
+                  menjadi bagian dari alumni sekolah ini."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img
+                  src="assets/img/alumni/alumni-2.jpg"
+                  alt="Dwiki"
+                  class="author-img"
+                />
+                <h4>Dwiki</h4>
+                <p class="role">Alumni Angkatan 21</p>
+              </div>
+            </div>
+
+            <div class="testimonial-item">
+              <div class="testimonial-quote">
+                <p>
+                  "Fasilitas praktik yang lengkap di SMKN 2 Ngawi memungkinkan
+                  saya mengasah keterampilan secara maksimal. Ini sangat
+                  membantu saya dalam karir saat ini."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img
+                  src="assets/img/alumni/alumni-3.jpg"
+                  alt="Medi Tedi"
+                  class="author-img"
+                />
+                <h4>Medi Tedi</h4>
+                <p class="role">Alumni Angkatan 17</p>
+              </div>
+            </div>
+
+            <div class="testimonial-item">
+              <div class="testimonial-quote">
+                <p>
+                  “Guru-guru di SMKN 2 Ngawi selalu sabar membimbing dan
+                  memberikan pengalaman belajar yang nyata. Ilmu yang saya
+                  dapatkan menjadi bekal berharga untuk dunia kerja.”
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img
+                  src="assets/img/alumni/alumni-4.jpg"
+                  alt="Timoti Jamal"
+                  class="author-img"
+                />
+                <h4>Timoti Jamal</h4>
+                <p class="role">Alumni Angkatan 19</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <!-- /Events Section -->
 
-      <!-- Chefs Section -->
-      <section id="chefs" class="chefs section light-background">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Headmaster</h2>
-          <p>
-            <span>Kepala Sekolah</span>
-            <span class="description-title">dan Wakilnya<br /></span>
-          </p>
+      <section id="major" class="major-section">
+        <div class="container-fluid">
+          <div class="section-header">
+            <h2>Major</h2>
+            <p>
+              <span>Jurusan Unggulan</span>
+              <span class="highlight">Kami</span>
+            </p>
+          </div>
+          <div class="major-grid">
+            <div class="major-item">
+              <img
+                src="assets/img/jurusan/jurusan-1.jpg"
+                alt="Multimedia"
+                class="major-img"
+              />
+              <div class="major-content">
+                <h4>Multimedia</h4>
+                <p>
+                  Jurusan Multimedia berfokus pada pengembangan kreativitas
+                  dalam bidang desain grafis, animasi, dan produksi video. Siswa
+                  akan mempelajari tools dan teknik terbaru untuk menciptakan
+                  konten digital yang menarik dan relevan.
+                </p>
+              </div>
+            </div>
+            <div class="major-item">
+              <img
+                src="assets/img/jurusan/jurusan-2.png"
+                alt="Rekayasa Perangkat Lunak"
+                class="major-img"
+              />
+              <div class="major-content">
+                <h4>Rekayasa Perangkat Lunak</h4>
+                <p>
+                  Jurusan ini mempersiapkan siswa untuk menjadi pengembang
+                  perangkat lunak yang handal. Kurikulum mencakup pemrograman,
+                  database, dan pengembangan aplikasi, baik desktop maupun
+                  berbasis web, sesuai standar industri.
+                </p>
+              </div>
+            </div>
+            <div class="major-item">
+              <img
+                src="assets/img/jurusan/jurusan-3.jpg"
+                alt="Teknik Komputer dan Jaringan"
+                class="major-img"
+              />
+              <div class="major-content">
+                <h4>Teknik Komputer dan Jaringan</h4>
+                <p>
+                  Siswa akan dilatih untuk menjadi ahli di bidang instalasi,
+                  pemeliharaan, dan perbaikan hardware serta jaringan komputer.
+                  Materi yang diajarkan meliputi konfigurasi router, server, dan
+                  keamanan jaringan.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- End Section Title -->
+      </section>
 
-        <div class="container">
-          <div class="row gy-4">
-            <div
-              class="col-lg-4 d-flex align-items-stretch"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="team-member">
-                <div class="member-img">
-                  <img
-                    src="assets/img/head/head-1.jpg"
-                    class="img-fluid"
-                    alt=""
+      <section id="headmaster" class="headmaster-section">
+        <div class="container-fluid">
+          <div class="section-header">
+            <h2>Headmaster</h2>
+            <p>
+              <span>Our</span>
+              <span class="highlight">Headmaster</span>
+            </p>
+          </div>
+
+          <div class="headmaster-grid">
+            <div class="headmaster-card">
+              <img
+                src="assets/img/head/head-1.jpg"
+                alt="Ambha Thu Singh S.E., M.M."
+                class="headmaster-img"
+              />
+              <div class="headmaster-info">
+                <h4>Ambha Thu Singh S.E., M.M.</h4>
+                <span>Kepala Sekolah</span>
+                <p class="headmaster-bio">
+                  Dengan pengalaman lebih dari 20 tahun di dunia pendidikan,
+                  Ambha Thu Singh S.E., M.M. telah memimpin SMKN 2 Ngawi menuju
+                  prestasi yang gemilang. Visi dan dedikasinya dalam
+                  mengembangkan potensi siswa menjadikan sekolah ini sebagai
+                  salah satu yang terbaik di wilayahnya.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="container-fluid">
+          <div class="section-header">
+            <h2>Contact</h2>
+            <p>
+              <span>Butuh Bantuan?</span>
+              <span class="highlight">Hubungi Kami</span>
+            </p>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-info">
+              <div class="info-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <h4>Alamat:</h4>
+                  <p>Jl. Teuku Umar No.23, Kota Ngawi, Jawa Timur, Indonesia</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <h4>Email:</h4>
+                  <p>info@smkn2ngawi.sch.id</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <i class="fa-solid fa-phone-flip"></i>
+                <div>
+                  <h4>Telepon:</h4>
+                  <p>0351-749216</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <i class="fa-solid fa-clock"></i>
+                <div>
+                  <h4>Jam Operasional:</h4>
+                  <p>
+                    <strong>Senin-Jum'at:</strong> <span>09:00 - 20:00</span>
+                    <br />
+                    <strong>Sabtu-Minggu</strong>: <span>Libur</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form-container">
+              <form
+                action="forms/contact.php"
+                method="post"
+                class="contact-form"
+              >
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    placeholder="Nama Lengkap"
+                    required
                   />
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter-x"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
                 </div>
-                <div class="member-info">
-                  <h4>Ambatusing S.Pd., M.Pd.</h4>
-                  <span>Waka Kesiswaan</span>
-                  <p>
-                    Ambatusing, S.Pd., M.Pd. lahir di Ngawi pada 19 Agustus 1987. Menempuh pendidikan dasar di SDN 2 Ngawi, melanjutkan ke SMPN 3 Depok, lalu SMA Negeri 5 Jakarta. Gelar S1 dan S2 diraih di Universitas Gadjah Mada jurusan Pendidikan Komputer.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- End Chef Team Member -->
-
-            <div
-              class="col-lg-4 d-flex align-items-stretch"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="team-member">
-                <div class="member-img">
-                  <img
-                    src="assets/img/head/head-2.jpg"
-                    class="img-fluid"
-                    alt=""
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    placeholder="Email"
+                    required
                   />
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter-x"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
                 </div>
-                <div class="member-info">
-                  <h4>Ironi Lazuardi, S.Pd., M.T.</h4>
-                  <span>Kepala Sekolah</span>
-                  <p>
-                    Ironi Lazuardi, S.Pd., M.T. lahir di Ngawi pada 12 Juli 1975. Menempuh pendidikan dasar di SDN 1 Ngawi, melanjutkan ke SMPN 2 Ngawi, lalu SMA Negeri 1 Ngawi. Gelar S1 dan S2 diperoleh dari Universitas Negeri Yogyakarta jurusan Pendidikan Teknik Mesin.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- End Chef Team Member -->
-
-            <div
-              class="col-lg-4 d-flex align-items-stretch"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="team-member">
-                <div class="member-img">
-                  <img
-                    src="assets/img/head/head-3.jpg"
-                    class="img-fluid"
-                    alt=""
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="subject"
+                    placeholder="Subjek"
+                    required
                   />
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter-x"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
                 </div>
-                <div class="member-info">
-                  <h4>Rehan Wangsaf, S.Pd., M.Pd.</h4>
-                  <span>Waka Kurikulum</span>
-                  <p>
-                    Rehan Wangsaf, S.Pd., M.Pd. lahir di Madiun pada 3 Maret 1980. Mengawali pendidikan di SDN 1 Madiun, melanjutkan ke SMPN 1 Madiun, lalu SMA Negeri 2 Madiun. Pendidikan tinggi ditempuh di Universitas Negeri Malang jurusan Pendidikan Matematika hingga meraih gelar S2.
-                  </p>
+                <div class="form-group">
+                  <textarea
+                    class="form-control"
+                    name="message"
+                    rows="5"
+                    placeholder="Pesan"
+                    required
+                  ></textarea>
                 </div>
-              </div>
+                <div class="form-actions">
+                  <button type="submit" class="btn-submit">Kirim Pesan</button>
+                </div>
+              </form>
             </div>
-            <!-- End Chef Team Member -->
           </div>
         </div>
       </section>
-      <!-- /Chefs Section -->
-
-      <!-- Contact Section -->
-      <section id="contact" class="contact section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Contact</h2>
-          <p>
-            <span>Butuh Bantuan?</span>
-            <span class="description-title">Kontak Kami</span>
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="mb-5">
-            <iframe
-              style="width: 100%; height: 400px"
-              src="https://www.google.com/maps/embed/v1/place?q=smk%20negeri%202%20ngawi&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-              frameborder="0"
-              allowfullscreen=""
-            ></iframe>
-          </div>
-          <!-- End Google Maps -->
-
-          <div class="row gy-4">
-            <div class="col-md-6">
-              <div
-                class="info-item d-flex align-items-center"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <i class="icon bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Alamat</h3>
-                  <p>Jl. Supriyadi Km 3 , Kandangan, Ngawi</p>
-                </div>
-              </div>
-            </div>
-            <!-- End Info Item -->
-
-            <div class="col-md-6">
-              <div
-                class="info-item d-flex align-items-center"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                <i class="icon bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Telp</h3>
-                  <p>(0123) 696969</p>
-                </div>
-              </div>
-            </div>
-            <!-- End Info Item -->
-
-            <div class="col-md-6">
-              <div
-                class="info-item d-flex align-items-center"
-                data-aos="fade-up"
-                data-aos-delay="400"
-              >
-                <i class="icon bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email</h3>
-                  <p>admin1234@smkn2ngawi.sch.id</p>
-                </div>
-              </div>
-            </div>
-            <!-- End Info Item -->
-
-            <div class="col-md-6">
-              <div
-                class="info-item d-flex align-items-center"
-                data-aos="fade-up"
-                data-aos-delay="500"
-              >
-                <i class="icon bi bi-clock flex-shrink-0"></i>
-                <div>
-                  <h3>Jam Operasional<br /></h3>
-                  <p>
-                    <strong>Senin-Jum'at:</strong> 09:00 - 20:00<br />
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- End Info Item -->
-          </div>
-        </div>
-      </section>
-      <!-- /Contact Section -->
     </main>
 
-    <footer id="footer" class="footer dark-background">
-      <div class="container">
-        <div class="row gy-3">
-          <div class="col-lg-3 col-md-6 d-flex">
-            <i class="bi bi-geo-alt icon"></i>
-            <div class="address">
-              <h4>Alamat</h4>
-              <p>Jl. Supriyadi Km 3</p>
-              <p>Kandangan, Ngawi</p>
-              <p></p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex">
-            <i class="bi bi-telephone icon"></i>
-            <div>
-              <h4>Kontak</h4>
-              <p>
-                <strong>Telp:</strong> <span>(0123) 696969</span><br />
-                <strong>Email:</strong> <span>admin1234@smkn2ngawi.sch.id</span><br />
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex">
-            <i class="bi bi-clock icon"></i>
-            <div>
-              <h4>Jam Operasional</h4>
-              <p>
-                <strong>Senin-Jum'at:</strong> <span>09:00 - 20:00</span><br />
-                <strong>Sabtu-Minggu</strong>: <span>Libur</span>
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <h4>Ikuti Kami</h4>
-            <div class="social-links d-flex">
-              <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="footer-links">
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
         </div>
-      </div>
-
-      <div class="container copyright text-center mt-4">
-        <p>
-          © <span>Copyright</span> <strong class="px-1 sitename">SMKN 2 NGAWI</strong>
+        <p class="copyright">
+          © <span>Copyright</span> <strong>SMKN 2 NGAWI</strong>
         </p>
       </div>
     </footer>
 
-    <!-- Scroll Top -->
-    <a
-      href="#"
-      id="scroll-top"
-      class="scroll-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
+    <a href="#hero" class="scroll-top"
+      ><i class="fa-solid fa-arrow-up-long"></i
     ></a>
 
-    <!-- Preloader -->
-    <div id="preloader"></div>
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
   </body>
 </html>
